@@ -25,9 +25,9 @@ export default {
 // Titles
 @font-face {
     font-family: Styrene;
-    src: url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.eot'),
-        /* IE9 Compat Modes */
-            url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.woff2') format('woff2'),
+    src: 
+        /* IE9 Compat Modes */ url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.woff2')
+            format('woff2'),
         /* Super Modern Browsers */
             url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.woff') format('woff'),
         /* Pretty Modern Browsers */
@@ -36,7 +36,7 @@ export default {
 // Texts, links, etc
 @font-face {
     font-family: Canela;
-    src: url('assets/fonts/Canela-Regular/Canela-Regular.eot'),
+    src: 
         /* IE9 Compat Modes */ url('assets/fonts/Canela-Regular/Canela-Regular.woff2') format('woff2'),
         /* Super Modern Browsers */ url('assets/fonts/Canela-Regular/Canela-Regular.woff') format('woff'),
         /* Pretty Modern Browsers */ url('assets/fonts/Canela-Regular/Canela-Regular.ttf') format('truetype'); /* Safari, Android, iOS */

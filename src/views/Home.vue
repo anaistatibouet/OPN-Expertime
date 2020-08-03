@@ -9,11 +9,13 @@
                 <div class="video">
                     <VideoPlayer />
                 </div>
-                <div class="slider"></div>
+                <div class="slider">
+                    <SliderMobile />
+                </div>
             </main>
-            <footer></footer>
         </div>
         <div class="desktop-device"></div>
+        <footer></footer>
     </div>
 </template>
 
@@ -21,12 +23,14 @@
 // @ is an alias to /src
 import CoverMobile from '@/components/CoverMobile'
 import VideoPlayer from '@/components/VideoPlayer'
+import SliderMobile from '@/components/SliderMobile'
 
 export default {
     name: 'Home',
     components: {
         CoverMobile,
         VideoPlayer,
+        SliderMobile,
     },
     data() {
         return {}

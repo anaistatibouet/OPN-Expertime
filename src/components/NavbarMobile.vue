@@ -1,6 +1,5 @@
 <template>
     <div class="navbar-mobile mobile-device">
-        <!-- <span class="testimage"></span> -->
         <div class="left">
             <button><img src="../assets/icons/menu_white.svg" alt="menu" /></button>
             <router-link to="/" exact> <img src="../assets/img/logo_white.png" alt="logo" class="logo"/></router-link>
@@ -39,9 +38,9 @@ export default {
     justify-content: space-between;
     align-items: center;
 
-    .testimage {
-        filter: invert(1);
-    }
+    // .testimage {
+    //     filter: invert(1);
+    // }
 
     .left {
         width: 40vw;
