@@ -1,6 +1,6 @@
 <template>
-    <div class="header-mobile">
-        <div class="cover">
+    <div class="cover-mobile">
+        <div class="cover-image">
             <div class="bg-img"></div>
         </div>
         <section class="cover-text">
@@ -16,21 +16,23 @@
 
 <script>
 export default {
-    name: 'HeaderMobile',
+    name: 'CoverMobile',
 }
 </script>
 
 <style lang="scss" scoped>
-.header-mobile {
-    .bg-img {
-        position: absolute;
-        top: 0;
-        background-image: url('../assets/img/home_bg_mobile.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100vw;
-        z-index: -10;
+.cover-mobile {
+    .cover-image {
+        .bg-img {
+            position: absolute;
+            top: 0;
+            background-image: url('../assets/img/home_bg_mobile.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+            z-index: -10;
+        }
     }
 
     .cover-text {

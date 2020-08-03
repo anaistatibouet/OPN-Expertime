@@ -1,17 +1,32 @@
 <template>
     <div class="home">
-        <HeaderMobile />
+        <div class="mobile-device">
+            <header>
+                <CoverMobile />
+                <span class="slash"></span>
+            </header>
+            <main>
+                <div class="video">
+                    <VideoPlayer />
+                </div>
+                <div class="slider"></div>
+            </main>
+            <footer></footer>
+        </div>
+        <div class="desktop-device"></div>
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HeaderMobile from '@/components/HeaderMobile'
+import CoverMobile from '@/components/CoverMobile'
+import VideoPlayer from '@/components/VideoPlayer'
 
 export default {
     name: 'Home',
     components: {
-        HeaderMobile,
+        CoverMobile,
+        VideoPlayer,
     },
     data() {
         return {}
@@ -19,4 +34,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.mobile-device {
+    header {
+        height: 100vh;
+    }
+}
+</style>

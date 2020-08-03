@@ -1,6 +1,9 @@
 <template>
     <div id="app">
-        <NavbarMobile />
+        <div class="mobile-device">
+            <NavbarMobile class="navbar-mobile" />
+        </div>
+        <div class="desktop-device"></div>
         <router-view />
     </div>
 </template>
@@ -46,6 +49,7 @@ export default {
     --dark-gold: #dfb57b;
     --darker-gold: #cba36c;
     --white: #ffffff;
+    --light-gray: #e2e2e5;
     --dark-gray: #8d8e93;
     --darker-gray: #6c6d72;
     --black: #000000;
@@ -69,6 +73,15 @@ export default {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #000000;
+
+    .mobile-device {
+        .navbar-mobile {
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+    }
 }
 
 body {
@@ -90,6 +103,11 @@ h2 {
     line-height: 38px;
 }
 
+h3 {
+    font-size: 24px;
+    line-height: 29px;
+}
+
 h5 {
     font-size: 18px;
     line-height: 22px;
@@ -109,6 +127,13 @@ li {
     list-style-type: none;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -117,16 +142,29 @@ li {
     text-transform: uppercase;
 }
 
-button {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
 .icon {
     width: 24px;
     height: 24px;
+}
+
+.slash:after {
+    display: inline;
+    content: url('assets/icons/slash.svg');
+    left: 45vw;
+    position: absolute;
+    bottom: -18px;
+}
+
+@media screen and (min-width: 1024px) {
+    .mobile-device {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .desktop-device {
+        display: none;
+    }
 }
 
 // #nav {
