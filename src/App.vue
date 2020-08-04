@@ -109,9 +109,19 @@ h3 {
     line-height: 29px;
 }
 
+h4 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
 h5 {
     font-size: 18px;
     line-height: 22px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 19px;
 }
 
 p,
@@ -122,6 +132,7 @@ a {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 li {
@@ -147,13 +158,23 @@ button {
     width: 24px;
     height: 24px;
 }
-
-.slash:after {
+.slash {
     position: relative;
     left: 45vw;
     bottom: 18px;
     z-index: 20;
     content: url('assets/icons/slash.svg');
+}
+
+.link {
+    text-align: center;
+    margin-bottom: 40px;
+
+    a {
+        width: 90vw;
+        border-radius: 20px;
+        border: 1px solid var(--black);
+    }
 }
 
 @media screen and (min-width: 1024px) {

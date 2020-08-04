@@ -5,8 +5,8 @@
                 Redécouvrez le plaisir d’une soirée cocktails à la maison
             </h3>
             <article>
-                <img src="../assets/img/player.jpg" alt="imageplayer" class="video" />
-                <span><img src="../assets/icons/play.svg" alt="play"/></span>
+                <img src="@/assets/img/player.jpg" alt="imageplayer" class="video" />
+                <span><img src="@/assets/icons/play.svg" alt="play"/></span>
             </article>
         </section>
     </div>
@@ -22,7 +22,7 @@ export default {
 .videoplayer {
     section {
         h3 {
-            margin-top: 0;
+            margin: 0 30px 30px;
             text-align: center;
         }
 

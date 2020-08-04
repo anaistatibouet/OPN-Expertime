@@ -11,10 +11,17 @@
                 </div>
                 <div class="slider">
                     <SliderMobile />
-                    <span class="slash section-separator"></span>
                 </div>
+                <span class="slash section-separator"></span>
                 <div class="house-cocktail">
                     <HouseCocktailsMobile />
+                </div>
+                <span class="slash"></span>
+                <div class="inspiration-article">
+                    <ArticlesMobile />
+                </div>
+                <div class="cocktail-selection">
+                    <CocktailSelection />
                 </div>
             </main>
         </div>
@@ -29,6 +36,8 @@ import CoverMobile from '@/components/CoverMobile'
 import VideoPlayer from '@/components/VideoPlayer'
 import SliderMobile from '@/components/SliderMobile'
 import HouseCocktailsMobile from '@/components/HouseCocktailsMobile'
+import ArticlesMobile from '@/components/ArticlesMobile'
+import CocktailSelection from '@/components/CocktailSelection'
 
 export default {
     name: 'Home',
@@ -37,6 +46,8 @@ export default {
         VideoPlayer,
         SliderMobile,
         HouseCocktailsMobile,
+        ArticlesMobile,
+        CocktailSelection,
     },
     data() {
         return {}
@@ -46,7 +57,7 @@ export default {
 
 <style lang="scss" scoped>
 .section-separator {
-    bottom: 0;
+    bottom: -18px;
 }
 .mobile-device {
     header {

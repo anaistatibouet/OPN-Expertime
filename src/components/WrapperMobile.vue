@@ -8,14 +8,14 @@
                     </p>
                     <img
                         v-if="showFirstElement"
-                        src="../assets/icons/minus.svg"
+                        src="@/assets/icons/minus.svg"
                         alt="moins"
                         v-bind:class="{ active: showFirstElement }"
                         v-on:click="WrapFirstElement"
                     />
                     <img
                         v-else
-                        src="../assets/icons/plus.svg"
+                        src="@/assets/icons/plus.svg"
                         alt="moins"
                         v-bind:class="{ active: showFirstElement }"
                         v-on:click="WrapFirstElement"
@@ -23,8 +23,8 @@
                 </header>
                 <main v-if="showFirstElement" v-bind:class="{ showContent: showFirstElement }">
                     <div class="illustration">
-                        <img src="../assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
-                        <img src="../assets/img/mobile.png" alt="mobile" class="mobile" />
+                        <img src="@/assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
+                        <img src="@/assets/img/mobile.png" alt="mobile" class="mobile" />
                     </div>
                     <div class="content-text">
                         <h4>
@@ -47,14 +47,14 @@
                     </p>
                     <img
                         v-if="showSecondElement"
-                        src="../assets/icons/minus.svg"
+                        src="@/assets/icons/minus.svg"
                         alt="moins"
                         v-bind:class="{ active: showSecondElement }"
                         v-on:click="WrapSecondElement"
                     />
                     <img
                         v-else
-                        src="../assets/icons/plus.svg"
+                        src="@/assets/icons/plus.svg"
                         alt="moins"
                         v-bind:class="{ active: showSecondElement }"
                         v-on:click="WrapSecondElement"
@@ -62,8 +62,8 @@
                 </header>
                 <main v-if="showSecondElement" v-bind:class="{ showContent: showSecondElement }">
                     <div class="illustration">
-                        <img src="../assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
-                        <img src="../assets/img/mobile.png" alt="mobile" class="mobile" />
+                        <img src="@/assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
+                        <img src="@/assets/img/mobile.png" alt="mobile" class="mobile" />
                     </div>
                     <div class="content-text">
                         <h4>
@@ -82,14 +82,14 @@
                     <p class="title-wrap" v-bind:class="{ changeColor: showThridElement }">+ 300 recettes exclusives</p>
                     <img
                         v-if="showThridElement"
-                        src="../assets/icons/minus.svg"
+                        src="@/assets/icons/minus.svg"
                         alt="moins"
                         v-bind:class="{ active: showThridElement }"
                         v-on:click="WrapThridElement"
                     />
                     <img
                         v-else
-                        src="../assets/icons/plus.svg"
+                        src="@/assets/icons/plus.svg"
                         alt="moins"
                         v-bind:class="{ active: showThridElement }"
                         v-on:click="WrapThridElement"
@@ -97,8 +97,8 @@
                 </header>
                 <main v-if="showThridElement" v-bind:class="{ showContent: showThridElement }">
                     <div class="illustration">
-                        <img src="../assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
-                        <img src="../assets/img/mobile.png" alt="mobile" class="mobile" />
+                        <img src="@/assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
+                        <img src="@/assets/img/mobile.png" alt="mobile" class="mobile" />
                     </div>
                     <div class="content-text">
                         <h4>
@@ -117,14 +117,14 @@
                     <p class="title-wrap" v-bind:class="{ changeColor: showFourthElement }">Des recettes pas à pas</p>
                     <img
                         v-if="showFourthElement"
-                        src="../assets/icons/minus.svg"
+                        src="@/assets/icons/minus.svg"
                         alt="moins"
                         v-bind:class="{ active: showFourthElement }"
                         v-on:click="WrapFourthElement"
                     />
                     <img
                         v-else
-                        src="../assets/icons/plus.svg"
+                        src="@/assets/icons/plus.svg"
                         alt="moins"
                         v-bind:class="{ active: showFourthElement }"
                         v-on:click="WrapFourthElement"
@@ -132,8 +132,8 @@
                 </header>
                 <main v-if="showFourthElement" v-bind:class="{ showContent: showFourthElement }">
                     <div class="illustration">
-                        <img src="../assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
-                        <img src="../assets/img/mobile.png" alt="mobile" class="mobile" />
+                        <img src="@/assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
+                        <img src="@/assets/img/mobile.png" alt="mobile" class="mobile" />
                     </div>
                     <div class="content-text">
                         <h4>
@@ -257,14 +257,12 @@ export default {
                 background-color: #fff;
 
                 h4 {
-                    font-size: 16px;
-                    line-height: 24px;
-                    letter-spacing: 0.04em;
                     text-transform: uppercase;
+                    letter-spacing: 0.04em;
                 }
 
                 p {
-                    width: 65vw;
+                    width: 70vw;
                     font-size: 15px;
                     line-height: 22px;
                     color: var(--darker-gray);

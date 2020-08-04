@@ -2,6 +2,8 @@
 node_modules
 /dist
 
+/src/components/template.vue
+
 # local env files
 .env.local
 .env.*.local
