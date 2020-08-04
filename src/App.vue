@@ -1,21 +1,18 @@
 <template>
     <div id="app">
         <div class="mobile-device">
-            <NavbarMobile class="navbar-mobile" />
-            <MenuMobile />
+            <HeaderMobile class="header-mobile" />
         </div>
         <div class="desktop-device"></div>
         <router-view />
     </div>
 </template>
 <script>
-import NavbarMobile from '@/components/NavbarMobile.vue'
-import MenuMobile from '@/components/MenuMobile'
+import HeaderMobile from '@/components/HeaderMobile.vue'
 
 export default {
     components: {
-        NavbarMobile,
-        MenuMobile,
+        HeaderMobile,
     },
     data() {
         return {}
@@ -79,13 +76,12 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     color: #231f10;
 
-    .mobile-device {
-        .navbar-mobile {
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-        }
+    .header-mobile {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
     }
 }
 

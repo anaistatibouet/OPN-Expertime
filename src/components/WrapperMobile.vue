@@ -181,7 +181,7 @@ export default {
         }
 
         main.showContent {
-            animation-duration: 10s;
+            animation-duration: 1.5s;
             animation-name: animationOpening;
         }
 
