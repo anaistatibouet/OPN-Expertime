@@ -26,7 +26,10 @@
             </main>
         </div>
         <div class="desktop-device"></div>
-        <footer></footer>
+        <footer>
+            <Footer />
+            <LegalMentions />
+        </footer>
     </div>
 </template>
 
@@ -38,6 +41,8 @@ import SliderMobile from '@/components/SliderMobile'
 import HouseCocktailsMobile from '@/components/HouseCocktailsMobile'
 import ArticlesMobile from '@/components/ArticlesMobile'
 import CocktailSelection from '@/components/CocktailSelection'
+import Footer from '@/components/Footer'
+import LegalMentions from '@/components/LegalMentions'
 
 export default {
     name: 'Home',
@@ -48,6 +53,8 @@ export default {
         HouseCocktailsMobile,
         ArticlesMobile,
         CocktailSelection,
+        Footer,
+        LegalMentions,
     },
     data() {
         return {}

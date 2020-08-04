@@ -46,6 +46,7 @@ export default {
 
 :root {
     // Colors
+    --gold: #e4c291;
     --dark-gold: #dfb57b;
     --darker-gold: #cba36c;
     --white: #ffffff;
@@ -53,7 +54,7 @@ export default {
     --lighter-gray: #f5f6f6;
     --dark-gray: #8d8e93;
     --darker-gray: #6c6d72;
-    --black: #000000;
+    --black: #231f10;
 
     --border-radius-large: 24px;
     --border-radius-medium: 15px;
@@ -73,7 +74,7 @@ export default {
     font-family: Styrene, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #000000;
+    color: #231f10;
 
     .mobile-device {
         .navbar-mobile {
