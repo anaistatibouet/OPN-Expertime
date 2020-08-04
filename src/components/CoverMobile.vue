@@ -37,8 +37,12 @@ export default {
 
     .cover-text {
         position: absolute;
-        top: 225px;
+        top: 255px;
         width: 100vw;
+
+        h2 {
+            animation: glow 2s ease-in-out infinite;
+        }
 
         h2,
         h5 {
@@ -66,6 +70,15 @@ export default {
                 text-transform: uppercase;
                 color: var(--white);
                 text-align: center;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px #000000;
+            }
+            to {
+                text-shadow: 0 0 30px #c7c7c7, 0 0 10px #aeafaf;
             }
         }
     }

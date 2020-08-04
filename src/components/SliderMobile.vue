@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel-mobile">
+    <div class="slider-mobile">
         <carousel
             :per-page="1"
             :mouse-drag="false"
@@ -69,9 +69,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.carousel-mobile {
+.slider-mobile {
     position: relative;
-    margin-top: 30px;
+    margin: 30px 0;
+
     .slides {
         width: 100vw;
         .slide {

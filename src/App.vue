@@ -50,6 +50,7 @@ export default {
     --darker-gold: #cba36c;
     --white: #ffffff;
     --light-gray: #e2e2e5;
+    --lighter-gray: #f5f6f6;
     --dark-gray: #8d8e93;
     --darker-gray: #6c6d72;
     --black: #000000;
@@ -148,11 +149,11 @@ button {
 }
 
 .slash:after {
-    display: inline;
-    content: url('assets/icons/slash.svg');
+    position: relative;
     left: 45vw;
-    position: absolute;
-    bottom: -18px;
+    bottom: 18px;
+    z-index: 20;
+    content: url('assets/icons/slash.svg');
 }
 
 @media screen and (min-width: 1024px) {
