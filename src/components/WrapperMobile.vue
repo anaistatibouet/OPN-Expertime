@@ -158,11 +158,22 @@ export default {
 
             .title-wrap.changeColor {
                 color: var(--darker-gold);
+                animation-duration: 1.25s;
+                animation-name: animationChangeColor;
             }
             .title-wrap {
                 width: 70vw;
                 font-size: 15px;
                 line-height: 22px;
+            }
+        }
+
+        @keyframes animationChangeColor {
+            0% {
+                color: var(--black);
+            }
+            100% {
+                color: var(--darker-gold);
             }
         }
 
