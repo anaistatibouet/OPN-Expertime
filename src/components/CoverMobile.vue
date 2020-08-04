@@ -41,7 +41,7 @@ export default {
         width: 100vw;
 
         h2 {
-            animation: glow 2s ease-in-out infinite;
+            animation: glow 2s ease-in-out 3;
         }
 
         h2,

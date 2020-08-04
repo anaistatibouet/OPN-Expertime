@@ -11,11 +11,11 @@
                 <p>Martinez</p>
             </article>
             <article>
-                <img src="@/assets/img/martinez.png" alt="Martinez" />
+                <img src="@/assets/img/martinez_3.png" alt="Martinez" />
                 <p>Martinez</p>
             </article>
             <article>
-                <img src="@/assets/img/martinez.png" alt="Martinez" />
+                <img src="@/assets/img/martinez_4.png" alt="Martinez" />
                 <p>Martinez</p>
             </article>
         </section>
