@@ -103,6 +103,10 @@ export default {
     transition: 1s all ease-in-out;
 }
 
+.menu-mobile {
+    font-family: Canela, serif;
+}
+
 .showMenu {
     animation-duration: 1s;
     animation-name: slideright;

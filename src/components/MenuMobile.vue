@@ -47,21 +47,6 @@ export default {
     background-color: var(--lighter-gray);
     z-index: 1000;
 
-    animation-duration: 1s;
-    animation-name: slideleft;
-
-    @keyframes slideleft {
-        from {
-            opacity: 1;
-            width: 86vw;
-        }
-
-        to {
-            opacity: 0;
-            width: 0;
-        }
-    }
-
     header {
         padding: 20px 30px;
         border-bottom: 1px solid var(--light-gray);
@@ -73,14 +58,14 @@ export default {
     main {
         ul {
             padding: 0;
-            min-width: 100vw;
+            min-width: 86vw;
 
             .title-submenu {
                 font-size: 16px;
                 line-height: 24px;
                 text-transform: uppercase;
                 margin-left: 30px;
-                min-width: 100vw;
+                min-width: 86vw;
 
                 .decoration {
                     width: 16px;
@@ -92,11 +77,11 @@ export default {
 
             .content-submenu {
                 margin: 10px 30px;
-                min-width: 100vw;
+                min-width: 86vw;
 
                 li {
                     margin: 20px 0;
-                    min-width: 100vw;
+                    min-width: 86vw;
 
                     a {
                         font-family: Canela, serif;
