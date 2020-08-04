@@ -3,13 +3,28 @@
         <section>
             <article>
                 <header>
-                    <p class="title-wrap active">Des idées selon vos envies</p>
-                    <a href="#"><img src="../assets/icons/minus.svg" alt="moins"/></a>
+                    <p class="title-wrap" v-bind:class="{ changeColor: showFirstElement }">
+                        Des idées selon vos envies
+                    </p>
+                    <img
+                        v-if="showFirstElement"
+                        src="@/assets/icons/minus.svg"
+                        alt="moins"
+                        v-bind:class="{ active: showFirstElement }"
+                        v-on:click="WrapFirstElement"
+                    />
+                    <img
+                        v-else
+                        src="@/assets/icons/plus.svg"
+                        alt="moins"
+                        v-bind:class="{ active: showFirstElement }"
+                        v-on:click="WrapFirstElement"
+                    />
                 </header>
-                <main>
+                <main v-if="showFirstElement" v-bind:class="{ showContent: showFirstElement }">
                     <div class="illustration">
-                        <img src="../assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
-                        <img src="../assets/img/mobile.png" alt="mobile" class="mobile" />
+                        <img src="@/assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
+                        <img src="@/assets/img/mobile.png" alt="mobile" class="mobile" />
                     </div>
                     <div class="content-text">
                         <h4>
@@ -27,13 +42,28 @@
             </article>
             <article>
                 <header>
-                    <p class="title-wrap">Des recommandations personnalisées</p>
-                    <a href="#"><img src="../assets/icons/plus.svg" alt="plus"/></a>
+                    <p class="title-wrap" v-bind:class="{ changeColor: showSecondElement }">
+                        Des recommandations personnalisées
+                    </p>
+                    <img
+                        v-if="showSecondElement"
+                        src="@/assets/icons/minus.svg"
+                        alt="moins"
+                        v-bind:class="{ active: showSecondElement }"
+                        v-on:click="WrapSecondElement"
+                    />
+                    <img
+                        v-else
+                        src="@/assets/icons/plus.svg"
+                        alt="moins"
+                        v-bind:class="{ active: showSecondElement }"
+                        v-on:click="WrapSecondElement"
+                    />
                 </header>
-                <main>
+                <main v-if="showSecondElement" v-bind:class="{ showContent: showSecondElement }">
                     <div class="illustration">
-                        <img src="../assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
-                        <img src="../assets/img/mobile.png" alt="mobile" class="mobile" />
+                        <img src="@/assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
+                        <img src="@/assets/img/mobile.png" alt="mobile" class="mobile" />
                     </div>
                     <div class="content-text">
                         <h4>
@@ -49,13 +79,26 @@
             </article>
             <article>
                 <header>
-                    <p class="title-wrap">+ 300 recettes exclusives</p>
-                    <a href="#"><img src="../assets/icons/plus.svg" alt="plus"/></a>
+                    <p class="title-wrap" v-bind:class="{ changeColor: showThridElement }">+ 300 recettes exclusives</p>
+                    <img
+                        v-if="showThridElement"
+                        src="@/assets/icons/minus.svg"
+                        alt="moins"
+                        v-bind:class="{ active: showThridElement }"
+                        v-on:click="WrapThridElement"
+                    />
+                    <img
+                        v-else
+                        src="@/assets/icons/plus.svg"
+                        alt="moins"
+                        v-bind:class="{ active: showThridElement }"
+                        v-on:click="WrapThridElement"
+                    />
                 </header>
-                <main>
+                <main v-if="showThridElement" v-bind:class="{ showContent: showThridElement }">
                     <div class="illustration">
-                        <img src="../assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
-                        <img src="../assets/img/mobile.png" alt="mobile" class="mobile" />
+                        <img src="@/assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
+                        <img src="@/assets/img/mobile.png" alt="mobile" class="mobile" />
                     </div>
                     <div class="content-text">
                         <h4>
@@ -71,13 +114,26 @@
             </article>
             <article>
                 <header>
-                    <p class="title-wrap">Des recettes pas à pas</p>
-                    <a href="#"><img src="../assets/icons/plus.svg" alt="plus"/></a>
+                    <p class="title-wrap" v-bind:class="{ changeColor: showFourthElement }">Des recettes pas à pas</p>
+                    <img
+                        v-if="showFourthElement"
+                        src="@/assets/icons/minus.svg"
+                        alt="moins"
+                        v-bind:class="{ active: showFourthElement }"
+                        v-on:click="WrapFourthElement"
+                    />
+                    <img
+                        v-else
+                        src="@/assets/icons/plus.svg"
+                        alt="moins"
+                        v-bind:class="{ active: showFourthElement }"
+                        v-on:click="WrapFourthElement"
+                    />
                 </header>
-                <main>
+                <main v-if="showFourthElement" v-bind:class="{ showContent: showFourthElement }">
                     <div class="illustration">
-                        <img src="../assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
-                        <img src="../assets/img/mobile.png" alt="mobile" class="mobile" />
+                        <img src="@/assets/img/mobile_idea.jpg" alt="image cocktail" class="cocktail" />
+                        <img src="@/assets/img/mobile.png" alt="mobile" class="mobile" />
                     </div>
                     <div class="content-text">
                         <h4>
@@ -98,6 +154,37 @@
 <script>
 export default {
     name: 'WrapperMobile',
+    data() {
+        return {
+            showFirstElement: true,
+            showSecondElement: false,
+            showThridElement: false,
+            showFourthElement: false,
+        }
+    },
+    methods: {
+        WrapFirstElement: function() {
+            this.showFirstElement = !this.showFirstElement
+        },
+        WrapSecondElement: function() {
+            this.showSecondElement = !this.showSecondElement
+            this.showFirstElement = false
+            this.showThridElement = false
+            this.showFourthElement = false
+        },
+        WrapThridElement: function() {
+            this.showThridElement = !this.showThridElement
+            this.showFirstElement = false
+            this.showSecondElement = false
+            this.showFourthElement = false
+        },
+        WrapFourthElement: function() {
+            this.showFourthElement = !this.showFourthElement
+            this.showFirstElement = false
+            this.showSecondElement = false
+            this.showThridElement = false
+        },
+    },
 }
 </script>
 
@@ -117,41 +204,65 @@ export default {
             background-color: var(--white);
             padding: 10px;
 
-            .title-wrap.active {
+            .title-wrap.changeColor {
                 color: var(--darker-gold);
             }
             .title-wrap {
+                width: 70vw;
                 font-size: 15px;
                 line-height: 22px;
             }
         }
 
+        @keyframes opacityChange {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        main.showContent {
+            animation-duration: 3s;
+            animation-name: opacityChange;
+        }
+
         main {
+            vertical-align: top;
             .illustration {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 .cocktail {
                     width: 90vw;
-                    position: absolute;
+                    position: relative;
                 }
 
                 .mobile {
-                    position: relative;
-                    bottom: -48px;
-                    left: 20vw;
+                    position: absolute;
+                    width: 50vw;
+                    left: 22%;
+                    bottom: 0;
                 }
             }
             .content-text {
-                padding: 50px 20px 30px;
+                padding: 20px 20px 30px;
                 background-color: #fff;
 
                 h4 {
-                    font-size: 16px;
-                    line-height: 24px;
-                    letter-spacing: 0.04em;
                     text-transform: uppercase;
+                    letter-spacing: 0.04em;
                 }
 
                 p {
-                    width: 65vw;
+                    width: 70vw;
                     font-size: 15px;
                     line-height: 22px;
                     color: var(--darker-gray);

@@ -46,6 +46,7 @@ export default {
 
 :root {
     // Colors
+    --gold: #e4c291;
     --dark-gold: #dfb57b;
     --darker-gold: #cba36c;
     --white: #ffffff;
@@ -53,7 +54,7 @@ export default {
     --lighter-gray: #f5f6f6;
     --dark-gray: #8d8e93;
     --darker-gray: #6c6d72;
-    --black: #000000;
+    --black: #231f10;
 
     --border-radius-large: 24px;
     --border-radius-medium: 15px;
@@ -73,7 +74,7 @@ export default {
     font-family: Styrene, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #000000;
+    color: #231f10;
 
     .mobile-device {
         .navbar-mobile {
@@ -109,9 +110,19 @@ h3 {
     line-height: 29px;
 }
 
+h4 {
+    font-size: 16px;
+    line-height: 24px;
+}
+
 h5 {
     font-size: 18px;
     line-height: 22px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 19px;
 }
 
 p,
@@ -122,6 +133,7 @@ a {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 li {
@@ -147,13 +159,23 @@ button {
     width: 24px;
     height: 24px;
 }
-
-.slash:after {
+.slash {
     position: relative;
     left: 45vw;
     bottom: 18px;
     z-index: 20;
     content: url('assets/icons/slash.svg');
+}
+
+.link {
+    text-align: center;
+    margin-bottom: 40px;
+
+    a {
+        width: 90vw;
+        border-radius: 20px;
+        border: 1px solid var(--black);
+    }
 }
 
 @media screen and (min-width: 1024px) {
