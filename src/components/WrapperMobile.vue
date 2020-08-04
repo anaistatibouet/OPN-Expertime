@@ -2,24 +2,12 @@
     <div class="wrapper-mobile">
         <section>
             <article>
-                <header>
+                <header v-bind:class="{ active: showFirstElement }" v-on:click="WrapFirstElement">
                     <p class="title-wrap" v-bind:class="{ changeColor: showFirstElement }">
                         Des idées selon vos envies
                     </p>
-                    <img
-                        v-if="showFirstElement"
-                        src="@/assets/icons/minus.svg"
-                        alt="moins"
-                        v-bind:class="{ active: showFirstElement }"
-                        v-on:click="WrapFirstElement"
-                    />
-                    <img
-                        v-else
-                        src="@/assets/icons/plus.svg"
-                        alt="moins"
-                        v-bind:class="{ active: showFirstElement }"
-                        v-on:click="WrapFirstElement"
-                    />
+                    <img v-if="showFirstElement" src="@/assets/icons/minus.svg" alt="moins" />
+                    <img v-else src="@/assets/icons/plus.svg" alt="moins" />
                 </header>
                 <main v-if="showFirstElement" v-bind:class="{ showContent: showFirstElement }">
                     <div class="illustration">
@@ -41,24 +29,12 @@
                 </main>
             </article>
             <article>
-                <header>
+                <header v-bind:class="{ active: showSecondElement }" v-on:click="WrapSecondElement">
                     <p class="title-wrap" v-bind:class="{ changeColor: showSecondElement }">
                         Des recommandations personnalisées
                     </p>
-                    <img
-                        v-if="showSecondElement"
-                        src="@/assets/icons/minus.svg"
-                        alt="moins"
-                        v-bind:class="{ active: showSecondElement }"
-                        v-on:click="WrapSecondElement"
-                    />
-                    <img
-                        v-else
-                        src="@/assets/icons/plus.svg"
-                        alt="moins"
-                        v-bind:class="{ active: showSecondElement }"
-                        v-on:click="WrapSecondElement"
-                    />
+                    <img v-if="showSecondElement" src="@/assets/icons/minus.svg" alt="moins" />
+                    <img v-else src="@/assets/icons/plus.svg" alt="moins" />
                 </header>
                 <main v-if="showSecondElement" v-bind:class="{ showContent: showSecondElement }">
                     <div class="illustration">
@@ -78,22 +54,10 @@
                 </main>
             </article>
             <article>
-                <header>
+                <header v-bind:class="{ active: showThridElement }" v-on:click="WrapThridElement">
                     <p class="title-wrap" v-bind:class="{ changeColor: showThridElement }">+ 300 recettes exclusives</p>
-                    <img
-                        v-if="showThridElement"
-                        src="@/assets/icons/minus.svg"
-                        alt="moins"
-                        v-bind:class="{ active: showThridElement }"
-                        v-on:click="WrapThridElement"
-                    />
-                    <img
-                        v-else
-                        src="@/assets/icons/plus.svg"
-                        alt="moins"
-                        v-bind:class="{ active: showThridElement }"
-                        v-on:click="WrapThridElement"
-                    />
+                    <img v-if="showThridElement" src="@/assets/icons/minus.svg" alt="moins" />
+                    <img v-else src="@/assets/icons/plus.svg" alt="moins" />
                 </header>
                 <main v-if="showThridElement" v-bind:class="{ showContent: showThridElement }">
                     <div class="illustration">
@@ -113,22 +77,10 @@
                 </main>
             </article>
             <article>
-                <header>
+                <header v-bind:class="{ active: showFourthElement }" v-on:click="WrapFourthElement">
                     <p class="title-wrap" v-bind:class="{ changeColor: showFourthElement }">Des recettes pas à pas</p>
-                    <img
-                        v-if="showFourthElement"
-                        src="@/assets/icons/minus.svg"
-                        alt="moins"
-                        v-bind:class="{ active: showFourthElement }"
-                        v-on:click="WrapFourthElement"
-                    />
-                    <img
-                        v-else
-                        src="@/assets/icons/plus.svg"
-                        alt="moins"
-                        v-bind:class="{ active: showFourthElement }"
-                        v-on:click="WrapFourthElement"
-                    />
+                    <img v-if="showFourthElement" src="@/assets/icons/minus.svg" alt="moins" />
+                    <img v-else src="@/assets/icons/plus.svg" alt="moins" />
                 </header>
                 <main v-if="showFourthElement" v-bind:class="{ showContent: showFourthElement }">
                     <div class="illustration">
@@ -214,13 +166,13 @@ export default {
             }
         }
 
-        @keyframes opacityChange {
+        @keyframes animationOpening {
             0% {
                 opacity: 0;
             }
 
             50% {
-                opacity: 0.8;
+                opacity: 0.5;
             }
 
             100% {
@@ -229,17 +181,20 @@ export default {
         }
 
         main.showContent {
-            animation-duration: 3s;
-            animation-name: opacityChange;
+            animation-duration: 10s;
+            animation-name: animationOpening;
         }
 
         main {
             vertical-align: top;
+            transition: all 0.2s ease-out;
+
             .illustration {
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+
                 .cocktail {
                     width: 90vw;
                     position: relative;

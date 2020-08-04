@@ -1,11 +1,19 @@
 <template>
-    <div class="navbar-mobile mobile-device">
+    <div class="navbar-mobile mobile-device" v-bind:class="{ changeColor: scrollPosition > 60 }">
         <div class="left">
-            <button><img src="@/assets/icons/menu_white.svg" alt="menu" /></button>
-            <router-link to="/" exact> <img src="@/assets/img/logo_white.png" alt="logo" class="logo"/></router-link>
+            <div v-if="scrollPosition < 60">
+                <button><img src="@/assets/icons/menu_white.svg" alt="menu" /></button>
+                <router-link to="/" exact>
+                    <img src="@/assets/img/logo_white.png" alt="logo" class="logo"
+                /></router-link>
+            </div>
+            <div v-else>
+                <button><img src="@/assets/icons/menu.svg" alt="menu" /></button>
+                <router-link to="/" exact> <img src="@/assets/img/logo.png" alt="logo" class="logo"/></router-link>
+            </div>
         </div>
         <div class="right">
-            <ul>
+            <ul v-if="scrollPosition < 60">
                 <li>
                     <a href="#"><img src="@/assets/icons/search_white.svg" alt="search" class="icon icon-header"/></a>
                 </li>
@@ -19,6 +27,20 @@
                     </div>
                 </li>
             </ul>
+            <ul v-else>
+                <li>
+                    <a href="#"><img src="@/assets/icons/search.svg" alt="search" class="icon icon-header"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="@/assets/icons/user.svg" alt="user" class="icon icon-header"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="@/assets/icons/basket.svg" alt="basket" class="icon icon-header"/></a>
+                    <div class="nb-article">
+                        <p>1</p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -26,10 +48,28 @@
 <script>
 export default {
     name: 'NavbarMobile',
+    data() {
+        return {
+            scrollPosition: null,
+        }
+    },
+    methods: {
+        updateScroll() {
+            this.scrollPosition = window.scrollY
+        },
+    },
+    mounted() {
+        window.addEventListener('scroll', this.updateScroll)
+    },
 }
 </script>
 
 <style lang="scss" scoped>
+.changeColor {
+    background-color: var(--white) !important;
+    transition: 1s all ease-in-out;
+}
+
 .navbar-mobile {
     width: 100vw;
     padding: 15px;
@@ -37,10 +77,7 @@ export default {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-
-    // .testimage {
-    //     filter: invert(1);
-    // }
+    transition: 1s all ease-in-out;
 
     .left {
         width: 40vw;

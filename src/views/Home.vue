@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div class="home mask">
         <div class="mobile-device">
             <header>
                 <CoverMobile />
@@ -66,6 +66,12 @@ export default {
 .section-separator {
     bottom: -18px;
 }
+
+// .mask {
+//     opacity: 0.25;
+//     background-color: var(--black);
+// }
+
 .mobile-device {
     header {
         height: 100vh;

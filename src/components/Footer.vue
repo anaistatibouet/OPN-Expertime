@@ -4,8 +4,10 @@
             <p class="title-footer">Des cocktails dans votre boîte mail !</p>
             <p class="description">Nos recettes, nos conseils et nos histoires tous les mois.</p>
             <div class="subscribe">
-                <input type="email" placeholder="Votre adresse mail ..." />
-                <button type="submit">Je m’inscris</button>
+                <form id="app" method="post">
+                    <input type="email" id="mail" v-model="mail" name="mail" placeholder="Votre adresse mail ..." />
+                    <button type="submit">Je m’inscris</button>
+                </form>
             </div>
         </div>
         <hr />
@@ -25,7 +27,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+    name: 'Footer',
+    data() {
+        return {
+            mail: null,
+        }
+    },
+}
 </script>
 
 <style lang="scss" scoped>

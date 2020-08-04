@@ -2,6 +2,7 @@
     <div id="app">
         <div class="mobile-device">
             <NavbarMobile class="navbar-mobile" />
+            <MenuMobile />
         </div>
         <div class="desktop-device"></div>
         <router-view />
@@ -9,10 +10,12 @@
 </template>
 <script>
 import NavbarMobile from '@/components/NavbarMobile.vue'
+import MenuMobile from '@/components/MenuMobile'
 
 export default {
     components: {
         NavbarMobile,
+        MenuMobile,
     },
     data() {
         return {}
