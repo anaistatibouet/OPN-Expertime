@@ -15,15 +15,12 @@
                         <img src="@/assets/img/mobile.png" alt="mobile" class="mobile" />
                     </div>
                     <div class="content-text">
-                        <h4>
-                            Trouvez les cocktails<br />réalisables<br />avec les ingredients<br />disponibles chez vous
-                        </h4>
+                        <h4>Trouvez les cocktails<br />réalisables<br />avec les ingredients<br />disponibles chez vous</h4>
                         <p>
-                            Nous nous sommes tous déjà retrouvés à la maison avec l’envie de prendre un verre sans la
-                            motivation pour faire des courses. Avec la fonctionnalité « Frigo », il suffit de rentrer
-                            les ingrédients disponibles chez vous et l’application vous trouvera tous les cocktails
-                            réalisables sans sortir de chez vous ! Pour aller plus loin, l’app vous recommandera aussi
-                            les ingrédients qui vous manquent pour débloquer toujours plus de recettes.
+                            Nous nous sommes tous déjà retrouvés à la maison avec l’envie de prendre un verre sans la motivation pour faire
+                            des courses. Avec la fonctionnalité « Frigo », il suffit de rentrer les ingrédients disponibles chez vous et
+                            l’application vous trouvera tous les cocktails réalisables sans sortir de chez vous ! Pour aller plus loin,
+                            l’app vous recommandera aussi les ingrédients qui vous manquent pour débloquer toujours plus de recettes.
                         </p>
                     </div>
                 </main>
@@ -46,9 +43,8 @@
                             Title article
                         </h4>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eius aliquid repudiandae
-                            dolorem, dolore placeat at dolor. Unde, perspiciatis inventore. Minima pariatur vero officia
-                            eos dolorem nam sit excepturi debitis.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eius aliquid repudiandae dolorem, dolore placeat
+                            at dolor. Unde, perspiciatis inventore. Minima pariatur vero officia eos dolorem nam sit excepturi debitis.
                         </p>
                     </div>
                 </main>
@@ -69,9 +65,8 @@
                             Title article
                         </h4>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eius aliquid repudiandae
-                            dolorem, dolore placeat at dolor. Unde, perspiciatis inventore. Minima pariatur vero officia
-                            eos dolorem nam sit excepturi debitis.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eius aliquid repudiandae dolorem, dolore placeat
+                            at dolor. Unde, perspiciatis inventore. Minima pariatur vero officia eos dolorem nam sit excepturi debitis.
                         </p>
                     </div>
                 </main>
@@ -92,9 +87,8 @@
                             Title article
                         </h4>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eius aliquid repudiandae
-                            dolorem, dolore placeat at dolor. Unde, perspiciatis inventore. Minima pariatur vero officia
-                            eos dolorem nam sit excepturi debitis.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eius aliquid repudiandae dolorem, dolore placeat
+                            at dolor. Unde, perspiciatis inventore. Minima pariatur vero officia eos dolorem nam sit excepturi debitis.
                         </p>
                     </div>
                 </main>
@@ -146,11 +140,11 @@ export default {
 
     article {
         width: 90vw;
-        margin-top: 10px;
+        margin: 10px auto;
 
         header {
             display: flex;
-            flex-direction: row nowrap;
+            flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
             background-color: var(--white);
@@ -198,7 +192,10 @@ export default {
 
         main {
             vertical-align: top;
-            transition: all 0.2s ease-out;
+            -webkit-transition: all 0.5s ease-in;
+            -moz-transition: all 0.5s ease-in;
+            -o-transition: all 0.5s ease-in;
+            transition: all 0.5s ease-in;
 
             .illustration {
                 position: relative;
@@ -232,6 +229,23 @@ export default {
                     font-size: 15px;
                     line-height: 22px;
                     color: var(--darker-gray);
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 720px) and (max-width: 1023px) {
+        article {
+            width: 80vw;
+            main {
+                .illustration {
+                    .cocktail {
+                        width: 80vw;
+                    }
+
+                    .mobile {
+                        width: 45vw;
+                    }
                 }
             }
         }

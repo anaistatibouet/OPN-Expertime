@@ -3,16 +3,20 @@
         <div class="mobile-device">
             <HeaderMobile class="header-mobile" />
         </div>
-        <div class="desktop-device"></div>
+        <div class="desktop-device">
+            <HeaderDesktop class="header-desktop" />
+        </div>
         <router-view />
     </div>
 </template>
 <script>
 import HeaderMobile from '@/components/HeaderMobile.vue'
+import HeaderDesktop from '@/components/HeaderDesktop'
 
 export default {
     components: {
         HeaderMobile,
+        HeaderDesktop,
     },
     data() {
         return {}
@@ -28,10 +32,10 @@ export default {
     src: 
         /* IE9 Compat Modes */ url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.woff2')
             format('woff2'),
-        /* Super Modern Browsers */
-            url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.woff') format('woff'),
-        /* Pretty Modern Browsers */
-            url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+        /* Super Modern Browsers */ url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.woff')
+            format('woff'),
+        /* Pretty Modern Browsers */ url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.ttf')
+            format('truetype'); /* Safari, Android, iOS */
 }
 // Texts, links, etc
 @font-face {
@@ -77,6 +81,14 @@ export default {
     color: #231f10;
 
     .header-mobile {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .header-desktop {
         overflow: hidden;
         position: fixed;
         top: 0;
@@ -170,6 +182,11 @@ button {
     text-align: center;
     margin-bottom: 40px;
 
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+
     a {
         width: 90vw;
         border-radius: 20px;
@@ -177,9 +194,31 @@ button {
     }
 }
 
+.already-user {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.06em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+
 @media screen and (min-width: 1024px) {
     .mobile-device {
         display: none;
+    }
+    .link {
+        border-radius: 2px !important;
+        a {
+            -webkit-transition: all 0.5s ease-in;
+            -moz-transition: all 0.5s ease-in;
+            -o-transition: all 0.5s ease-in;
+            transition: all 0.5s ease-in;
+        }
+        a:hover {
+            background-color: var(--black);
+            color: var(--gold);
+            border-radius: 5px !important;
+        }
     }
 }
 
@@ -188,17 +227,4 @@ button {
         display: none;
     }
 }
-
-// #nav {
-//   padding: 30px;
-
-//   a {
-//     font-weight: bold;
-//     color: #2c3e50;
-
-//     &.router-link-exact-active {
-//       color: #42b983;
-//     }
-//   }
-// }
 </style>

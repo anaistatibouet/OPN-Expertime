@@ -11,7 +11,7 @@
         >
             <slide class="slide">
                 <div class="content-slide">
-                    <img src="@/assets/icons/cocktail.svg" alt="" />
+                    <img src="@/assets/icons/cocktail.svg" alt="cocktail" />
                     <p class="content-text">
                         Des recettes à découvrir et personnaliser en fonction de vos goûts
                     </p>
@@ -19,7 +19,7 @@
             </slide>
             <slide class="slide">
                 <div class="content-slide">
-                    <img src="@/assets/icons/jigger.svg" alt="" />
+                    <img src="@/assets/icons/jigger.png" alt="jigger" />
                     <p class="content-text">
                         Des dosages précis pour réaliser vos cocktails favoris
                     </p>
@@ -27,7 +27,7 @@
             </slide>
             <slide class="slide">
                 <div class="content-slide">
-                    <img src="@/assets/icons/world.svg" alt="" />
+                    <img src="@/assets/icons/world.svg" alt="world" />
                     <p class="content-text">
                         Des alcools reconnus mondialement
                     </p>
@@ -35,7 +35,7 @@
             </slide>
             <slide class="slide">
                 <div class="content-slide">
-                    <img src="@/assets/icons/refill.svg" alt="" />
+                    <img src="@/assets/icons/refill.svg" alt="refill" />
                     <p class="content-text">
                         Une gestion et un réapprovisionnement facilité de votre bar
                     </p>
@@ -43,7 +43,7 @@
             </slide>
             <slide class="slide">
                 <div class="content-slide">
-                    <img src="@/assets/icons/shield.svg" alt="" />
+                    <img src="@/assets/icons/shield.svg" alt="shield" />
                     <p class="content-text">
                         Un accès contrôlé et sécurisé à vos alcools préférés
                     </p>
@@ -51,7 +51,7 @@
             </slide>
             <slide class="slide">
                 <div class="content-slide">
-                    <img src="@/assets/icons/interior.svg" alt="" />
+                    <img src="@/assets/icons/interior.svg" alt="interior" />
                     <p class="content-text">
                         Un design moderne et élégant s’intégrant dans votre quotidien
                     </p>
