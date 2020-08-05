@@ -3,14 +3,31 @@
         <h2>Vos cocktails favoris à réaliser à la maison grâce à l’app Cocktails/Opn !</h2>
         <div class="navslider">
             <ul>
-                <li>Des idées selon vos envies</li>
-                <li>Des recommandations personnalisées</li>
-                <li>+ 300 recettes exclusives</li>
-                <li>Des recettes pas à pas</li>
+                <li v-bind:class="{ active: currentTitle == titles[0] }">Des idées selon vos envies</li>
+                <li v-bind:class="{ active: currentTitle == titles[1] }">Des recommandations personnalisées</li>
+                <li v-bind:class="{ active: currentTitle == titles[2] }">+ 300 recettes exclusives</li>
+                <li v-bind:class="{ active: currentTitle == titles[3] }">Des recettes pas à pas</li>
             </ul>
         </div>
         <div class="slider">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+            <button id="prev" @click="prev"><img src="@/assets/icons/arrow_left.svg" alt="Previous" class="icon" /></button>
+            <div class="content-slider">
+                <div v-for="i in [currentIndex]" :key="i">
+                    <div class="content-text">
+                        <h4>{{ currentTitle }}</h4>
+                        <p>{{ currentDescription }}</p>
+                        <div class="download-application">
+                            <img src="@/assets/img/badge_googleplay.png" alt="Download google play" />
+                            <img src="@/assets/img/badge_appstore.png" alt="Download app store" />
+                        </div>
+                    </div>
+                </div>
+                <div class="content-img">
+                    <img src="@/assets/img/desktop_idea.jpg" alt="Cocktail background" />
+                    <img src="@/assets/img/mobile.png" alt="mobile" class="mobile-background" />
+                </div>
+            </div>
+            <button id="next" @click="next"><img src="@/assets/icons/arrow_right.svg" alt="Next" class="icon" /></button>
         </div>
     </div>
 </template>
@@ -18,6 +35,42 @@
 <script>
 export default {
     name: 'SliderDesktop',
+    data() {
+        return {
+            titles: [
+                'Trouvez les cocktails réalisables avec les ingredients disponibles chez vous',
+                'Des recommandations personnalisées',
+                '+ 300 recettes exclusives ',
+                'Des recettes pas à pas',
+            ],
+            descriptions: [
+                'Nous nous sommes tous déjà retrouvés à la maison avec l’envie de prendre un verre sans la motivation pour faire des courses. Avec la fonctionnalité « Frigo », il suffit de rentrer les ingrédients disponibles chez vous et l’application vous trouvera tous les cocktails réalisables sans sortir de chez vous ! Pour aller plus loin, l’app vous recommandera aussi les ingrédients qui vous manquent pour débloquer toujours plus de recettes.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum exercitationem officiis dicta, illum est dignissimos repellendus, autem labore delectus expedita atque id soluta laboriosam quisquam veritatis nihil. Asperiores, reiciendis possimus.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum exercitationem officiis dicta, illum est dignissimos repellendus, autem labore delectus expedita atque id soluta laboriosam quisquam veritatis nihil. Asperiores, reiciendis possimus.',
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum exercitationem officiis dicta, illum est dignissimos repellendus, autem labore delectus expedita atque id soluta laboriosam quisquam veritatis nihil. Asperiores, reiciendis possimus.',
+            ],
+            timer: null,
+            currentIndex: 0,
+        }
+    },
+
+    methods: {
+        next: function() {
+            this.currentIndex += 1
+        },
+        prev: function() {
+            this.currentIndex -= 1
+        },
+    },
+
+    computed: {
+        currentTitle: function() {
+            return this.titles[Math.abs(this.currentIndex) % this.titles.length]
+        },
+        currentDescription: function() {
+            return this.descriptions[Math.abs(this.currentIndex) % this.descriptions.length]
+        },
+    },
 }
 </script>
 
@@ -38,20 +91,78 @@ export default {
             flex-flow: row nowrap;
             justify-content: center;
             padding: 0;
+            margin: 0;
 
             li:first-child {
                 margin-left: 0;
             }
 
             li {
+                padding-bottom: 10px;
                 margin-left: 20px;
                 color: var(--darker-gray);
+                transition: all 0.5 ease;
+            }
+
+            .active {
+                border-bottom: 3px solid var(--gold);
             }
         }
     }
 
     .slider {
         padding: 50px;
+        display: flex;
+        justify-content: center;
+
+        .content-slider {
+            margin: 0;
+            position: relative;
+            width: 60vw;
+            background-color: #fff;
+
+            .content-text {
+                position: absolute;
+                top: 10px;
+                right: 30px;
+                width: 35vw;
+                z-index: 20;
+                p {
+                    font-size: 15px;
+                    color: var(--darker-gray);
+                }
+
+                .download-application > img {
+                    width: 10vw;
+                    margin: 20px 10px 20px 0;
+                }
+            }
+
+            .mobile-background {
+                position: absolute;
+                left: 50px;
+                top: -20px;
+            }
+        }
+
+        #prev,
+        #next {
+            position: relative;
+            z-index: 20;
+            cursor: pointer;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        #prev {
+            left: 20px;
+        }
+
+        #next {
+            right: 20px;
+        }
     }
 }
 </style>
