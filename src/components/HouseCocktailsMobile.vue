@@ -2,8 +2,8 @@
     <div class="house-cocktail-mobile">
         <h3>Vos cocktails favoris à réaliser à la maison grâce à l’app Cocktails/Opn !</h3>
         <div class="download-application">
-            <img src="@/assets/img/badge_googleplay.png" alt="google play" />
-            <img src="@/assets/img/badge_appstore.png" alt="app store" />
+            <a href="#"><img src="@/assets/img/badge_googleplay.png" alt="google play"/></a>
+            <a href="#"><img src="@/assets/img/badge_appstore.png" alt="app store" /> </a>
         </div>
         <WrapperMobile />
     </div>

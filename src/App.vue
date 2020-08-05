@@ -87,6 +87,14 @@ export default {
         left: 0;
         z-index: 1000;
     }
+
+    .header-desktop {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
 }
 
 body {

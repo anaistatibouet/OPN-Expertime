@@ -10,24 +10,30 @@
             </ul>
         </div>
         <div class="slider">
-            <button id="prev" @click="prev"><img src="@/assets/icons/arrow_left.svg" alt="Previous" class="icon" /></button>
+            <button id="prev" @click="prev" @mouseover="hoverPrevious = true" @mouseleave="hoverPrevious = false">
+                <img v-if="hoverPrevious" src="@/assets/icons/arrow_left_gold.svg" alt="Previous" class="icon" />
+                <img v-else src="@/assets/icons/arrow_left.svg" alt="Previous" class="icon" />
+            </button>
             <div class="content-slider">
                 <div v-for="i in [currentIndex]" :key="i">
                     <div class="content-text">
                         <h4>{{ currentTitle }}</h4>
                         <p>{{ currentDescription }}</p>
                         <div class="download-application">
-                            <img src="@/assets/img/badge_googleplay.png" alt="Download google play" />
-                            <img src="@/assets/img/badge_appstore.png" alt="Download app store" />
+                            <a href="#"><img src="@/assets/img/badge_googleplay.png" alt="Download google play"/></a>
+                            <a href="#"><img src="@/assets/img/badge_appstore.png" alt="Download app store"/></a>
                         </div>
                     </div>
                 </div>
                 <div class="content-img">
-                    <img src="@/assets/img/desktop_idea.jpg" alt="Cocktail background" />
+                    <a href="#"></a> <img src="@/assets/img/desktop_idea.jpg" alt="Cocktail background" /> <a href="#"></a>
                     <img src="@/assets/img/mobile.png" alt="mobile" class="mobile-background" />
                 </div>
             </div>
-            <button id="next" @click="next"><img src="@/assets/icons/arrow_right.svg" alt="Next" class="icon" /></button>
+            <button id="next" @click="next" @mouseover="hoverNext = true" @mouseleave="hoverNext = false">
+                <img v-if="hoverNext" src="@/assets/icons/arrow_right_gold.svg" alt="Next" class="icon" />
+                <img v-else src="@/assets/icons/arrow_right.svg" alt="Next" class="icon" />
+            </button>
         </div>
     </div>
 </template>
@@ -49,8 +55,9 @@ export default {
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum exercitationem officiis dicta, illum est dignissimos repellendus, autem labore delectus expedita atque id soluta laboriosam quisquam veritatis nihil. Asperiores, reiciendis possimus.',
                 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum exercitationem officiis dicta, illum est dignissimos repellendus, autem labore delectus expedita atque id soluta laboriosam quisquam veritatis nihil. Asperiores, reiciendis possimus.',
             ],
-            timer: null,
             currentIndex: 0,
+            hoverPrevious: false,
+            hoverNext: false,
         }
     },
 
@@ -116,10 +123,16 @@ export default {
         justify-content: center;
 
         .content-slider {
+            cursor: pointer;
             margin: 0;
             position: relative;
             width: 60vw;
             background-color: #fff;
+
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: 0.6s ease-in-out;
+            transition: 0.6s ease-in-out;
 
             .content-text {
                 position: absolute;
@@ -132,7 +145,7 @@ export default {
                     color: var(--darker-gray);
                 }
 
-                .download-application > img {
+                .download-application > a img {
                     width: 10vw;
                     margin: 20px 10px 20px 0;
                 }
@@ -145,10 +158,16 @@ export default {
             }
         }
 
+        .content-slider:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
         #prev,
         #next {
             position: relative;
             z-index: 20;
+            transition: all 0.5 ease-in-out;
             cursor: pointer;
             img {
                 width: 50px;
