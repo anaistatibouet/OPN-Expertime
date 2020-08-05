@@ -146,11 +146,11 @@ export default {
 
     article {
         width: 90vw;
-        margin-top: 10px;
+        margin: 10px auto;
 
         header {
             display: flex;
-            flex-direction: row nowrap;
+            flex-flow: row nowrap;
             justify-content: space-between;
             align-items: center;
             background-color: var(--white);
@@ -232,6 +232,23 @@ export default {
                     font-size: 15px;
                     line-height: 22px;
                     color: var(--darker-gray);
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 720px) and (max-width: 1023px) {
+        article {
+            width: 80vw;
+            main {
+                .illustration {
+                    .cocktail {
+                        width: 80vw;
+                    }
+
+                    .mobile {
+                        width: 45vw;
+                    }
                 }
             }
         }

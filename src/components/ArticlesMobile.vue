@@ -7,7 +7,9 @@
         <section>
             <h5>Les derniers articles</h5>
             <article v-for="item in Array(3)" :key="item">
-                <img src="@/assets/img/article_img.jpg" alt="illustration article" />
+                <div class="illustration">
+                    <img src="@/assets/img/article_img.jpg" alt="illustration article" />
+                </div>
                 <div class="box">
                     <p class="tag">Cocktails</p>
                     <h6>Une histoire amère (qui finit bien)</h6>
@@ -44,24 +46,33 @@ export default {
     }
 
     section {
-        img {
-            width: 90vw;
-        }
+        article {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
 
-        .box {
-            position: relative;
-            top: -40px;
-            width: 70vw;
-            height: auto;
-            margin: auto;
-            background-color: var(--white);
-            padding: 20px 20px 30px;
-
-            h6 {
-                margin: 0;
+            .illustration {
+                img {
+                    width: 90vw;
+                }
+                margin: auto;
             }
-            .tag {
-                color: var(--dark-gold);
+
+            .box {
+                position: relative;
+                top: -40px;
+                width: 70vw;
+                height: auto;
+                margin: auto;
+                background-color: var(--white);
+                padding: 20px 20px 30px;
+
+                h6 {
+                    margin: 0;
+                }
+                .tag {
+                    color: var(--dark-gold);
+                }
             }
         }
     }
@@ -76,6 +87,16 @@ export default {
         width: 80vw;
         margin: auto;
         border: 1px solid #e2e2e5;
+    }
+
+    @media only screen and (min-width: 720px) and (max-width: 1023px) {
+        section {
+            .illustration {
+                img {
+                    width: 80vw !important;
+                }
+            }
+        }
     }
 }
 </style>

@@ -64,5 +64,16 @@ export default {
             padding: 10px 50px;
         }
     }
+
+    @media only screen and (min-width: 720px) and (max-width: 1023px) {
+        section {
+            article {
+                width: 20vw;
+                img {
+                    width: 20vw !important;
+                }
+            }
+        }
+    }
 }
 </style>

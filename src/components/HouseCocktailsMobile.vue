@@ -29,11 +29,21 @@ export default {
     }
     .download-application {
         display: flex;
-        flex-direction: row nowrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
 
         img {
             width: 40vw;
+        }
+    }
+
+    @media only screen and (min-width: 720px) and (max-width: 1023px) {
+        .download-application {
+            justify-content: center;
+            img {
+                width: 25vw;
+                margin: 25px;
+            }
         }
     }
 }
