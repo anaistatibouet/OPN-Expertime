@@ -63,11 +63,6 @@ export default {
 
             p {
                 margin-top: 50px;
-                font-size: 11px;
-                line-height: 16px;
-                letter-spacing: 0.06em;
-                text-decoration-line: underline;
-                text-transform: uppercase;
                 color: var(--white);
                 text-align: center;
             }

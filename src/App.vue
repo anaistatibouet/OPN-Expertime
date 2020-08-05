@@ -186,6 +186,14 @@ button {
     }
 }
 
+.already-user {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.06em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+
 @media screen and (min-width: 1024px) {
     .mobile-device {
         display: none;

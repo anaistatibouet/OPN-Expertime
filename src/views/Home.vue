@@ -60,10 +60,10 @@
 import CoverMobile from '@/components/CoverMobile'
 import SliderMobile from '@/components/SliderMobile'
 import HouseCocktailsMobile from '@/components/HouseCocktailsMobile'
-import Articles from '@/components/Articles'
 import VideoPlayer from '@/components/VideoPlayer'
 
 // Components shared
+import Articles from '@/components/Articles'
 import CocktailSelection from '@/components/CocktailSelection'
 import Footer from '@/components/Footer'
 import LegalMentions from '@/components/LegalMentions'

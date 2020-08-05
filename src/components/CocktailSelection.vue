@@ -129,7 +129,7 @@ export default {
 
         section {
             justify-content: center;
-            width: 100vw;
+            width: 98vw;
 
             .martinez {
                 display: none;
