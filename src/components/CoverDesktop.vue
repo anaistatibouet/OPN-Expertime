@@ -10,8 +10,7 @@
             <article>
                 <h3>Opn, votre bar connecté à domicile</h3>
                 <p>
-                    Le premier bar connecté qui vous permet de créer des centaines de cocktails à la maison en
-                    s’amusant.
+                    Le premier bar connecté qui vous permet de créer des centaines de cocktails à la maison en s’amusant.
                 </p>
                 <div>
                     <a href="#" class="discover-opn">
@@ -97,10 +96,10 @@ export default {
                     padding: 10px 50px;
                     border-radius: 20px;
 
-                    -webkit-transition: all 1s ease-out;
-                    -moz-transition: all 1s ease-out;
-                    -o-transition: all 1s ease-out;
-                    transition: all 1s ease-out;
+                    -webkit-transition: all 0.5s ease-out;
+                    -moz-transition: all 0.5s ease-out;
+                    -o-transition: all 0.5s ease-out;
+                    transition: all 0.5s ease-out;
                 }
             }
         }

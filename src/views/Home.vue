@@ -18,7 +18,7 @@
                 </div>
                 <span class="slash"></span>
                 <div class="inspiration-article">
-                    <ArticlesMobile />
+                    <Articles />
                 </div>
                 <div class="cocktail-selection">
                     <CocktailSelection />
@@ -33,15 +33,22 @@
                 <div class="discover">
                     <DiscoverCocktails />
                 </div>
-                <span class="slash"></span>
+                <span class="slash section-separator"></span>
                 <div class="slider">
                     <SliderDesktop />
+                </div>
+                <span class="slash"></span>
+                <div class="inspiration-article">
+                    <Articles />
+                </div>
+                <div class="cocktail-selection">
+                    <CocktailSelection />
                 </div>
             </main>
         </div>
         <footer>
-            <!-- <Footer />
-            <LegalMentions /> -->
+            <Footer />
+            <LegalMentions />
         </footer>
     </div>
 </template>
@@ -53,13 +60,13 @@
 import CoverMobile from '@/components/CoverMobile'
 import SliderMobile from '@/components/SliderMobile'
 import HouseCocktailsMobile from '@/components/HouseCocktailsMobile'
-import ArticlesMobile from '@/components/ArticlesMobile'
+import Articles from '@/components/Articles'
 import VideoPlayer from '@/components/VideoPlayer'
 
 // Components shared
 import CocktailSelection from '@/components/CocktailSelection'
-// import Footer from '@/components/Footer'
-// import LegalMentions from '@/components/LegalMentions'
+import Footer from '@/components/Footer'
+import LegalMentions from '@/components/LegalMentions'
 
 // Components Desktop
 import CoverDesktop from '@/components/CoverDesktop'
@@ -73,13 +80,13 @@ export default {
         VideoPlayer,
         SliderMobile,
         HouseCocktailsMobile,
-        ArticlesMobile,
+        Articles,
         CocktailSelection,
         CoverDesktop,
         DiscoverCocktails,
         SliderDesktop,
-        // Footer,
-        // LegalMentions,
+        Footer,
+        LegalMentions,
     },
     data() {
         return {}

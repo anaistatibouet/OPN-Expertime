@@ -7,7 +7,7 @@
             <div class="menu-content-1">
                 <ul>
                     <li>
-                        <a href="#"><router-link to="Bar"> Le bar connecté</router-link></a>
+                        <a href="#"><router-link to="Bar">Le bar connecté</router-link></a>
                     </li>
                     <li>
                         <a href="#"><router-link to="Cartridge">Cartouches</router-link></a>

@@ -6,9 +6,7 @@
                     <button v-on:click="displayMenu">
                         <img src="@/assets/icons/menu_white.svg" alt="menu" />
                     </button>
-                    <router-link to="/" exact>
-                        <img src="@/assets/img/logo_white.png" alt="logo" class="logo"
-                    /></router-link>
+                    <router-link to="/" exact> <img src="@/assets/img/logo_white.png" alt="logo" class="logo"/></router-link>
                 </div>
                 <div v-else>
                     <button v-on:click="displayMenu"><img src="@/assets/icons/menu.svg" alt="menu" /></button>
@@ -18,17 +16,13 @@
             <div class="right">
                 <ul v-if="scrollPosition < 60">
                     <li>
-                        <a href="#"
-                            ><img src="@/assets/icons/search_white.svg" alt="search" class="icon icon-header"
-                        /></a>
+                        <a href="#"><img src="@/assets/icons/search_white.svg" alt="search" class="icon icon-header"/></a>
                     </li>
                     <li>
                         <a href="#"><img src="@/assets/icons/user_white.svg" alt="user" class="icon icon-header"/></a>
                     </li>
                     <li>
-                        <a href="#"
-                            ><img src="@/assets/icons/basket_white.svg" alt="basket" class="icon icon-header"
-                        /></a>
+                        <a href="#"><img src="@/assets/icons/basket_white.svg" alt="basket" class="icon icon-header"/></a>
                         <div>
                             <div v-if="showMenu" v-on:click="hideMenu">
                                 <img src="@/assets/icons/close_white.svg" class="icon" alt="" />
@@ -100,7 +94,10 @@ export default {
 <style lang="scss" scoped>
 .changeColor {
     background-color: var(--white) !important;
-    transition: 1s all ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .menu-mobile {

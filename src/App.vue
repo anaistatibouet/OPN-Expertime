@@ -32,10 +32,10 @@ export default {
     src: 
         /* IE9 Compat Modes */ url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.woff2')
             format('woff2'),
-        /* Super Modern Browsers */
-            url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.woff') format('woff'),
-        /* Pretty Modern Browsers */
-            url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+        /* Super Modern Browsers */ url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.woff')
+            format('woff'),
+        /* Pretty Modern Browsers */ url('assets/fonts/BurberryStyreneBCyrWebBD-Regular/BurberryStyreneBCyrWebBD-Regular.ttf')
+            format('truetype'); /* Safari, Android, iOS */
 }
 // Texts, links, etc
 @font-face {
@@ -174,6 +174,11 @@ button {
     text-align: center;
     margin-bottom: 40px;
 
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+
     a {
         width: 90vw;
         border-radius: 20px;
@@ -184,6 +189,20 @@ button {
 @media screen and (min-width: 1024px) {
     .mobile-device {
         display: none;
+    }
+    .link {
+        border-radius: 2px !important;
+        a {
+            -webkit-transition: all 0.5s ease-in;
+            -moz-transition: all 0.5s ease-in;
+            -o-transition: all 0.5s ease-in;
+            transition: all 0.5s ease-in;
+        }
+        a:hover {
+            background-color: var(--black);
+            color: var(--gold);
+            border-radius: 5px !important;
+        }
     }
 }
 

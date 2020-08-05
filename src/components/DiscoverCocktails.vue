@@ -66,7 +66,7 @@ export default {
     position: relative;
     top: -15vh;
     background: var(--white);
-    padding: 50px;
+    padding: 50px 30px 0;
 
     h2 {
         text-align: center;
