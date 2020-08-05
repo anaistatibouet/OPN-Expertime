@@ -10,9 +10,15 @@
                     <span><img src="@/assets/icons/slash.svg" alt="slash" class="decoration"/></span>
                 </li>
                 <ul class="content-submenu">
-                    <li><a href="#">Cartouches</a></li>
-                    <li><a href="#">Le bar connecté</a></li>
-                    <li><a href="#">Accessoires</a></li>
+                    <li>
+                        <a href="#"><router-link to="Cartridge">Cartouches</router-link></a>
+                    </li>
+                    <li>
+                        <a href="#"><router-link to="Bar"> Le bar connecté</router-link></a>
+                    </li>
+                    <li>
+                        <a href="#"><router-link to="Accessoires">Accessoires</router-link></a>
+                    </li>
                 </ul>
             </ul>
             <hr class="separator" />
@@ -22,9 +28,15 @@
                     <span><img src="@/assets/icons/slash.svg" alt="slash" class="decoration"/></span>
                 </li>
                 <ul class="content-submenu">
-                    <li><a href="#">Recevoir</a></li>
-                    <li><a href="#">Food</a></li>
-                    <li><a href="#">Cocktails</a></li>
+                    <li>
+                        <a href="#"><router-link to="Recevoir">Recevoir</router-link></a>
+                    </li>
+                    <li>
+                        <a href="#"><router-link to="Food">Food</router-link></a>
+                    </li>
+                    <li>
+                        <a href="#"><router-link to="Cocktails">Cocktails</router-link></a>
+                    </li>
                 </ul>
             </ul>
         </main>

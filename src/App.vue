@@ -3,16 +3,20 @@
         <div class="mobile-device">
             <HeaderMobile class="header-mobile" />
         </div>
-        <div class="desktop-device"></div>
+        <div class="desktop-device">
+            <HeaderDesktop class="header-desktop" />
+        </div>
         <router-view />
     </div>
 </template>
 <script>
 import HeaderMobile from '@/components/HeaderMobile.vue'
+import HeaderDesktop from '@/components/HeaderDesktop'
 
 export default {
     components: {
         HeaderMobile,
+        HeaderDesktop,
     },
     data() {
         return {}

@@ -25,24 +25,35 @@
                 </div>
             </main>
         </div>
-        <div class="desktop-device"></div>
+        <div class="desktop-device">
+            <header>
+                <CoverDesktop />
+            </header>
+        </div>
         <footer>
-            <Footer />
-            <LegalMentions />
+            <!-- <Footer />
+            <LegalMentions /> -->
         </footer>
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
+
+// Components Mobile
 import CoverMobile from '@/components/CoverMobile'
-import VideoPlayer from '@/components/VideoPlayer'
 import SliderMobile from '@/components/SliderMobile'
 import HouseCocktailsMobile from '@/components/HouseCocktailsMobile'
 import ArticlesMobile from '@/components/ArticlesMobile'
+
+// Components shared
+import VideoPlayer from '@/components/VideoPlayer'
 import CocktailSelection from '@/components/CocktailSelection'
-import Footer from '@/components/Footer'
-import LegalMentions from '@/components/LegalMentions'
+// import Footer from '@/components/Footer'
+// import LegalMentions from '@/components/LegalMentions'
+
+// Components Desktop
+import CoverDesktop from '@/components/CoverDesktop'
 
 export default {
     name: 'Home',
@@ -53,8 +64,9 @@ export default {
         HouseCocktailsMobile,
         ArticlesMobile,
         CocktailSelection,
-        Footer,
-        LegalMentions,
+        CoverDesktop,
+        // Footer,
+        // LegalMentions,
     },
     data() {
         return {}

@@ -61,7 +61,7 @@ export default {
 
         .subscribe {
             display: flex;
-            flex-direction: row nowrap;
+            flex-flow: row nowrap;
             justify-content: space-between;
 
             input {
@@ -105,7 +105,7 @@ export default {
             width: 90vw;
             margin: 5px;
             display: flex;
-            flex-direction: row nowrap;
+            flex-flow: row nowrap;
             justify-content: flex-start;
             align-items: center;
         }

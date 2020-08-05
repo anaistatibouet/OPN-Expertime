@@ -26,7 +26,7 @@ export default {
         .bg-img {
             position: absolute;
             top: 0;
-            background-image: url('../assets/img/home_bg_mobile.png');
+            background-image: url('../assets/img/home_bg_mobile.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             height: 100vh;
@@ -41,7 +41,7 @@ export default {
         width: 100vw;
 
         h2 {
-            animation: glow 2s ease-in-out 3;
+            animation: glow 3s ease-in-out 1;
         }
 
         h2,
