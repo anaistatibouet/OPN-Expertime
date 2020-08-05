@@ -29,6 +29,15 @@
             <header>
                 <CoverDesktop />
             </header>
+            <main>
+                <div class="discover">
+                    <DiscoverCocktails />
+                </div>
+                <span class="slash"></span>
+                <div class="slider">
+                    <SliderDesktop />
+                </div>
+            </main>
         </div>
         <footer>
             <!-- <Footer />
@@ -45,15 +54,17 @@ import CoverMobile from '@/components/CoverMobile'
 import SliderMobile from '@/components/SliderMobile'
 import HouseCocktailsMobile from '@/components/HouseCocktailsMobile'
 import ArticlesMobile from '@/components/ArticlesMobile'
+import VideoPlayer from '@/components/VideoPlayer'
 
 // Components shared
-import VideoPlayer from '@/components/VideoPlayer'
 import CocktailSelection from '@/components/CocktailSelection'
 // import Footer from '@/components/Footer'
 // import LegalMentions from '@/components/LegalMentions'
 
 // Components Desktop
 import CoverDesktop from '@/components/CoverDesktop'
+import DiscoverCocktails from '@/components/DiscoverCocktails'
+import SliderDesktop from '@/components/SliderDesktop'
 
 export default {
     name: 'Home',
@@ -65,6 +76,8 @@ export default {
         ArticlesMobile,
         CocktailSelection,
         CoverDesktop,
+        DiscoverCocktails,
+        SliderDesktop,
         // Footer,
         // LegalMentions,
     },
@@ -83,6 +96,12 @@ export default {
 //     opacity: 0.25;
 //     background-color: var(--black);
 // }
+
+.desktop-device {
+    header {
+        height: 70vh;
+    }
+}
 
 .mobile-device {
     header {

@@ -35,10 +35,10 @@ export default {
 
             span img {
                 position: absolute;
-                top: 30vw;
+                top: 15vh;
                 left: 45vw;
                 width: 15vw;
-                height: 15vw;
+                height: 15vh;
             }
         }
     }

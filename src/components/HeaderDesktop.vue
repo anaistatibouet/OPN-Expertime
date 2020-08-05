@@ -1,51 +1,45 @@
 <template>
     <div class="header-desktop">
         <div class="header-menu">
-            <div>
-                <router-link to="/" exact>
-                    <img src="@/assets/icons/home_white.svg" alt="home" class="logo"
-                /></router-link>
+            <div class="return-home">
+                <router-link to="/" exact> <img src="@/assets/icons/home_white.svg" alt="home" class="icon icon-header"/></router-link>
             </div>
             <div class="menu-content-1">
                 <ul>
                     <li>
-                        <router-link tag="a" to="/Cartridge">Cartouches</router-link>
+                        <a href="#"><router-link to="Bar"> Le bar connecté</router-link></a>
                     </li>
                     <li>
-                        <router-link tag="a" to="/Bar"> Le bar connecté</router-link>
+                        <a href="#"><router-link to="Cartridge">Cartouches</router-link></a>
                     </li>
                     <li>
-                        <router-link tag="a" to="/Accessoires">Accessoires</router-link>
+                        <a href="#"><router-link to="Accessoires">Accessoires</router-link></a>
                     </li>
                 </ul>
             </div>
             <div class="menu-content-2">
                 <ul>
                     <li>
-                        <router-link tag="a" to="/Recevoir">Recevoir</router-link>
+                        <a href="#"><router-link to="Recevoir">Recevoir</router-link></a>
                     </li>
                     <li>
-                        <router-link tag="a" to="/Food">Food</router-link>
+                        <a href="#"><router-link to="Food">Food</router-link></a>
                     </li>
                     <li>
-                        <router-link tag="a" to="/Cocktails">Cocktails</router-link>
+                        <a href="#"><router-link to="Cocktails">Cocktails</router-link></a>
                     </li>
                 </ul>
             </div>
             <div>
                 <ul>
                     <li>
-                        <a href="#"
-                            ><img src="@/assets/icons/search_white.svg" alt="search" class="icon icon-header"
-                        /></a>
+                        <a href="#"><img src="@/assets/icons/search_white.svg" alt="search" class="icon icon-header"/></a>
                     </li>
                     <li>
                         <a href="#"><img src="@/assets/icons/user_white.svg" alt="user" class="icon icon-header"/></a>
                     </li>
                     <li class="basket">
-                        <a href="#"
-                            ><img src="@/assets/icons/basket_white.svg" alt="basket" class="icon icon-header"
-                        /></a>
+                        <a href="#"><img src="@/assets/icons/basket_white.svg" alt="basket" class="icon icon-header"/></a>
                         <div>
                             <div class="nb-article">
                                 <p>1</p>
@@ -57,9 +51,7 @@
         </div>
         <div class="logo-container">
             <h1>
-                <router-link to="/" exact>
-                    <img src="@/assets/img/logo_white.png" alt="logo" class="logo"
-                /></router-link>
+                <router-link to="/" exact> <img src="@/assets/img/logo_white.png" alt="logo" class="logo"/></router-link>
             </h1>
         </div>
     </div>
@@ -78,8 +70,19 @@ export default {
         flex-flow: row nowrap;
         justify-content: center;
         align-items: baseline;
-
         padding: 15px 30px;
+
+        .return-home {
+            .icon-header {
+                -webkit-transition: all 0.5s ease-in-out;
+                -moz-transition: all 0.5s ease-in-out;
+                -o-transition: all 0.5s ease-in-out;
+                transition: all 0.5s ease-in-out;
+            }
+            .icon-header:hover {
+                filter: invert(1);
+            }
+        }
 
         .menu-content-1 {
             margin-right: 100px;
@@ -98,12 +101,30 @@ export default {
                 a {
                     font-family: Canela;
                     font-size: 16px;
-                    line-height: 19px;
                     color: var(--white);
 
-                    a:active {
-                        text-decoration: underline white;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+
+                    .icon-header {
+                        -webkit-transition: all 0.5s ease-in-out;
+                        -moz-transition: all 0.5s ease-in-out;
+                        -o-transition: all 0.5s ease-in-out;
+                        transition: all 0.5s ease-in-out;
                     }
+
+                    .icon-header:hover {
+                        filter: invert(1);
+                    }
+                }
+                a:active {
+                    text-decoration: underline white;
+                }
+
+                a:hover {
+                    color: var(--black);
                 }
             }
 
@@ -130,9 +151,11 @@ export default {
 
     .logo-container {
         position: absolute;
-        top: 0;
+        top: 10px;
         width: 100vw;
         margin: 0 auto;
+        z-index: -1;
+
         .logo {
             width: 8vw;
             display: block;
