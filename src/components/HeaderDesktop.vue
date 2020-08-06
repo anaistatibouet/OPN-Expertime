@@ -4,8 +4,7 @@
             <div>
                 <div class="return-home" v-if="scrollPosition < 60">
                     <a href="#">
-                        <img src="@/assets/icons/home.svg" alt="home" class="icon icon-header" v-if="hoverHome" />
-                        <img src="@/assets/icons/home_white.svg" alt="home" class="icon icon-header" v-else />
+                        <img src="@/assets/icons/home_white.svg" alt="home" class="icon icon-header filter" />
                     </a>
                 </div>
                 <!-- Scroll navbar -->
@@ -44,22 +43,19 @@
             </div>
             <div>
                 <ul v-if="scrollPosition < 60">
-                    <li @mouseover="hoverSearch = true" @mouseleave="hoverSearch = false">
+                    <li>
                         <a href="#">
-                            <img src="@/assets/icons/search.svg" alt="search" class="icon icon-header" v-if="hoverSearch" />
-                            <img src="@/assets/icons/search_white.svg" alt="search" class="icon icon-header" v-else />
+                            <img src="@/assets/icons/search_white.svg" alt="search" class="icon icon-header filter" />
                         </a>
                     </li>
-                    <li @mouseover="hoverUser = true" @mouseleave="hoverUser = false">
+                    <li>
                         <a href="#">
-                            <img src="@/assets/icons/user.svg" alt="user" class="icon icon-header" v-if="hoverUser" />
-                            <img src="@/assets/icons/user_white.svg" alt="user" class="icon icon-header" v-else />
+                            <img src="@/assets/icons/user_white.svg" alt="user" class="icon icon-header filter" />
                         </a>
                     </li>
-                    <li class="basket" @mouseover="hoverBasket = true" @mouseleave="hoverBasket = false">
+                    <li class="basket">
                         <a href="#">
-                            <img src="@/assets/icons/basket.svg" alt="basket" class="icon icon-header" v-if="hoverBasket" />
-                            <img src="@/assets/icons/basket_white.svg" alt="basket" class="icon icon-header" v-else />
+                            <img src="@/assets/icons/basket_white.svg" alt="basket" class="icon icon-header filter" />
                         </a>
                         <div>
                             <div class="nb-article">
@@ -150,13 +146,13 @@ export default {
 
         .return-home {
             cursor: pointer;
-            .icon-header {
+            .icon-header.filter {
                 -webkit-transition: all 0.2s ease-in-out;
                 -moz-transition: all 0.2s ease-in-out;
                 -o-transition: all 0.2s ease-in-out;
                 transition: all 0.2s ease-in-out;
             }
-            .icon-header:hover {
+            .icon-header.filter:hover {
                 filter: invert(1);
             }
         }
@@ -195,11 +191,15 @@ export default {
                     -o-transition: all 0.5s ease-in-out;
                     transition: all 0.5s ease-in-out;
 
-                    .icon-header {
+                    .icon-header.filter {
                         -webkit-transition: all 0.5s ease-in-out;
                         -moz-transition: all 0.5s ease-in-out;
                         -o-transition: all 0.5s ease-in-out;
                         transition: all 0.5s ease-in-out;
+                    }
+
+                    .icon-header.filter:hover {
+                        filter: invert(1);
                     }
                 }
                 a:active {
@@ -234,7 +234,7 @@ export default {
 
     .logo-container {
         position: absolute;
-        top: -8px;
+        top: 0;
         width: 100vw;
         margin: 0 auto;
         z-index: -1;
