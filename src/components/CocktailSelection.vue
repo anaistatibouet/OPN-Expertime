@@ -4,7 +4,7 @@
         <h5>Notre sélection de cocktails</h5>
         <section>
             <article>
-                <img src="@/assets/img/martinez.png" alt="Martinez" />
+                <img src="@/assets/img/martinez.png" alt="Martinez" class="cocktail" />
                 <p>Martinez</p>
                 <div class="type-cocktail">
                     <ul>
@@ -15,7 +15,7 @@
                 </div>
             </article>
             <article>
-                <img src="@/assets/img/martinez_2.png" alt="Martinez" />
+                <img src="@/assets/img/martinez_2.png" alt="Martinez" class="cocktail" />
                 <p>Martinez</p>
                 <div class="type-cocktail">
                     <ul>
@@ -26,7 +26,7 @@
                 </div>
             </article>
             <article>
-                <img src="@/assets/img/martinez_3.png" alt="Martinez" />
+                <img src="@/assets/img/martinez_3.png" alt="Martinez" class="cocktail" />
                 <p>Martinez</p>
                 <div class="type-cocktail">
                     <ul>
@@ -37,7 +37,7 @@
                 </div>
             </article>
             <article>
-                <img src="@/assets/img/martinez_4.png" alt="Martinez" />
+                <img src="@/assets/img/martinez_4.png" alt="Martinez" class="cocktail" />
                 <p>Martinez</p>
                 <div class="type-cocktail">
                     <ul>
@@ -138,6 +138,7 @@ export default {
             article {
                 width: 8vw;
                 margin: 0 50px;
+                cursor: pointer;
 
                 .type-cocktail {
                     display: block;
@@ -155,6 +156,10 @@ export default {
                 }
                 img {
                     width: 8vw;
+                }
+
+                img.cocktail:hover {
+                    transform: scale(1.2);
                 }
 
                 p {

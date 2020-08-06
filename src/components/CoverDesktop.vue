@@ -52,7 +52,7 @@ export default {
 
     .cover-text {
         position: absolute;
-        bottom: 32vh;
+        bottom: 38vh;
         z-index: 20;
         display: flex;
         flex-flow: row nowrap;

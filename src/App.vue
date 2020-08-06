@@ -172,7 +172,7 @@ button {
 }
 .slash {
     position: relative;
-    left: 45vw;
+    left: 50vw;
     bottom: 18px;
     z-index: 20;
     content: url('assets/icons/slash.svg');
