@@ -58,6 +58,7 @@ export default {
         flex-flow: row nowrap;
         justify-content: space-around;
         align-items: flex-start;
+        color: var(--white);
 
         width: 100vw;
 
