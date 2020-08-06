@@ -129,16 +129,41 @@ export default {
 
                 article {
                     margin: 10px;
+
+                    cursor: pointer;
+
                     .illustration {
+                        margin: 10px;
+
                         img {
+                            border: 3px solid transparent !important;
                             width: 30vw !important;
                         }
 
-                        margin: 10px;
+                        img:hover {
+                            border: 3px solid var(--darker-gold) !important;
+
+                            -webkit-transition: all 0.3s ease-out;
+                            -moz-transition: all 0.3s ease-out;
+                            -o-transition: all 0.3s ease-out;
+                            transition: all 0.3s ease-out;
+                        }
                     }
 
                     .box {
                         width: 20vw;
+                        border: 1px solid transparent;
+                    }
+                }
+
+                article:hover {
+                    .box {
+                        border: 1px solid var(--darker-gray);
+
+                        -webkit-transition: all 0.3s ease-in;
+                        -moz-transition: all 0.3s ease-in;
+                        -o-transition: all 0.3s ease-in;
+                        transition: all 0.3s ease-in;
                     }
                 }
             }

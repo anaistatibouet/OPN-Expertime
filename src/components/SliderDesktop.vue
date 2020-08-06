@@ -136,7 +136,7 @@ export default {
             -webkit-transform: scale(1);
             transform: scale(1);
             -webkit-transition: 0.1s ease-in-out;
-            transition: 0.6s ease-in-out;
+            transition: 0.1s ease-in-out;
 
             .content-text {
                 position: absolute;
@@ -176,7 +176,7 @@ export default {
         #next {
             position: relative;
             z-index: 20;
-            transition: all 0.5 ease-in-out;
+            transition: all 0.2s ease-in-out;
             cursor: pointer;
             img {
                 width: 50px;
