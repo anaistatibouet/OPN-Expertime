@@ -62,15 +62,19 @@ export default {
     },
 
     methods: {
-        next: function() {
-            this.currentIndex += 1
-        },
+        // Permet de décrémenter l'index au click du bouton Previous
         prev: function() {
             this.currentIndex -= 1
+        },
+        // Permet d'incrémenter l'index au click du bouton Next
+        next: function() {
+            this.currentIndex += 1
         },
     },
 
     computed: {
+        // Fonctions qui permettent de changer le titre et la description.
+        // Déclenchement au click des boutons Previous et Next
         currentTitle: function() {
             return this.titles[Math.abs(this.currentIndex) % this.titles.length]
         },
@@ -131,7 +135,7 @@ export default {
 
             -webkit-transform: scale(1);
             transform: scale(1);
-            -webkit-transition: 0.6s ease-in-out;
+            -webkit-transition: 0.1s ease-in-out;
             transition: 0.6s ease-in-out;
 
             .content-text {
@@ -140,6 +144,11 @@ export default {
                 right: 30px;
                 width: 35vw;
                 z-index: 20;
+
+                h4 {
+                    margin-bottom: 10px;
+                }
+
                 p {
                     font-size: 15px;
                     color: var(--darker-gray);

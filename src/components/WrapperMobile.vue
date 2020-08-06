@@ -109,6 +109,8 @@ export default {
         }
     },
     methods: {
+        // Fonctions qui permettent de cacher ou afficher les articles choisis
+        // Dispo qu'en version mobile
         WrapFirstElement: function() {
             this.showFirstElement = !this.showFirstElement
         },
@@ -192,10 +194,10 @@ export default {
 
         main {
             vertical-align: top;
-            -webkit-transition: all 0.5s ease-in;
-            -moz-transition: all 0.5s ease-in;
-            -o-transition: all 0.5s ease-in;
-            transition: all 0.5s ease-in;
+            -webkit-transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
 
             .illustration {
                 position: relative;

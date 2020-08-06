@@ -160,23 +160,21 @@ export default {
                         cursor: pointer;
                         margin-left: 15px;
                         width: 10vw;
-                        -webkit-transition: all 0.3s ease-in;
+                        -webkit-transition: all 0.2s ease-in;
                         -webkit-transform: scale(1);
-                        -ms-transition: all 0.3s ease-in;
+                        -ms-transition: all 0.2s ease-in;
                         -ms-transform: scale(1);
-                        -moz-transition: all 0.3s ease-in;
+                        -moz-transition: all 0.2s ease-in;
                         -moz-transform: scale(1);
-                        transition: all 0.3s ease-in;
+                        transition: all 0.2s ease-in;
                         transform: scale(1);
                     }
 
                     button:hover {
-                        -webkit-transform: scale(1.5);
-                        -ms-transform: scale(1.5);
-                        -moz-transform: scale(1.5);
-                        transform: scale(1.5);
-                        border-top-left-radius: 2px;
-                        border-bottom-left-radius: 2px;
+                        -webkit-transform: scale(1.3);
+                        -ms-transform: scale(1.3);
+                        -moz-transform: scale(1.3);
+                        transform: scale(1.3);
                         background-color: #fff;
                         color: var(--dark-gold);
 
@@ -203,10 +201,10 @@ export default {
                     button {
                         cursor: pointer;
                         width: 22vw;
-                        -webkit-transition: all 0.5s ease;
-                        -ms-transition: all 0.5s ease;
-                        -moz-transition: all 0.5s ease;
-                        transition: all 0.5s ease;
+                        -webkit-transition: all 0.2s ease;
+                        -ms-transition: all 0.2s ease;
+                        -moz-transition: all 0.2s ease;
+                        transition: all 0.2s ease;
 
                         .rs {
                             opacity: 1;

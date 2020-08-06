@@ -79,15 +79,13 @@ export default {
 
             .discover-starter:hover {
                 a {
-                    text-align: left;
                     background-color: var(--dark-gold);
-                    padding: 15px 60px;
-                    border-radius: 15px;
-                    font-size: 20px;
+                    border-radius: 5px;
                 }
             }
 
             .discover-starter {
+                height: 25px;
                 margin: 30px 0;
 
                 a {
@@ -96,10 +94,10 @@ export default {
                     padding: 10px 50px;
                     border-radius: 20px;
 
-                    -webkit-transition: all 0.5s ease-out;
-                    -moz-transition: all 0.5s ease-out;
-                    -o-transition: all 0.5s ease-out;
-                    transition: all 0.5s ease-out;
+                    -webkit-transition: all 0.2s ease-out;
+                    -moz-transition: all 0.2s ease-out;
+                    -o-transition: all 0.2s ease-out;
+                    transition: all 0.2s ease-out;
                 }
             }
         }

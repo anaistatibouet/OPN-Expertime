@@ -64,7 +64,7 @@ export default {
     margin: 0 auto;
     width: 80vw;
     position: relative;
-    top: -15vh;
+    bottom: 2vh;
     background: var(--white);
     padding: 50px 30px 0;
 

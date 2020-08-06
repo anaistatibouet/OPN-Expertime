@@ -24,10 +24,7 @@
                     <li>
                         <a href="#"><img src="@/assets/icons/basket_white.svg" alt="basket" class="icon icon-header"/></a>
                         <div>
-                            <div v-if="showMenu" v-on:click="hideMenu">
-                                <img src="@/assets/icons/close_white.svg" class="icon" alt="" />
-                            </div>
-                            <div v-else class="nb-article">
+                            <div class="nb-article">
                                 <p>1</p>
                             </div>
                         </div>
@@ -43,16 +40,18 @@
                     <li>
                         <a href="#"><img src="@/assets/icons/basket.svg" alt="basket" class="icon icon-header"/></a>
                         <div>
-                            <div v-if="showMenu" v-on:click="hideMenu">
-                                <img src="@/assets/icons/close.svg" class="icon" alt="" />
-                            </div>
-                            <div v-else class="nb-article">
+                            <div class="nb-article">
                                 <p>1</p>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
+        </div>
+        <div v-if="showMenu" class="close-btn">
+            <button v-on:click="hideMenu" class="close">
+                <img src="@/assets/icons/close.svg" class="icon" alt="Close" />
+            </button>
         </div>
         <MenuMobile v-bind:class="{ showMenu: showMenu }" class="menu-mobile" v-if="showMenu" />
     </div>
@@ -73,19 +72,21 @@ export default {
         }
     },
     methods: {
+        // Permet de mettre à jour la position du scroll en vertical
         updateScroll() {
             this.scrollPosition = window.scrollY
         },
 
+        // Fonctions relatives à l'affichage du menu
         displayMenu: function() {
             this.showMenu = true
         },
-
         hideMenu: function() {
             this.showMenu = false
         },
     },
     mounted() {
+        // Permet d'écouter l'évèvement scroll et appliquer la fonction pour mettre à jour la position en scroll Y
         window.addEventListener('scroll', this.updateScroll)
     },
 }
@@ -118,6 +119,31 @@ export default {
     to {
         opacity: 1;
         width: 86vw;
+    }
+}
+
+.close-btn {
+    position: fixed;
+    width: 14vw;
+    height: 12vh;
+    top: 0;
+    right: 0;
+    background-color: var(--white);
+
+    animation: moveIn 1s ease-in-out 1;
+
+    img {
+        position: absolute;
+        left: 10px;
+    }
+}
+
+@keyframes moveIn {
+    0% {
+        right: -14vw;
+    }
+    100% {
+        right: 0;
     }
 }
 

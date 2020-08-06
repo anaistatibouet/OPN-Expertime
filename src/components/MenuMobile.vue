@@ -11,13 +11,13 @@
                 </li>
                 <ul class="content-submenu">
                     <li>
-                        <a href="#"><router-link to="Cartridge">Cartouches</router-link></a>
+                        <a href="#"><router-link to="/">Cartouches</router-link></a>
                     </li>
                     <li>
-                        <a href="#"><router-link to="Bar"> Le bar connecté</router-link></a>
+                        <a href="#"><router-link to="/"> Le bar connecté</router-link></a>
                     </li>
                     <li>
-                        <a href="#"><router-link to="Accessoires">Accessoires</router-link></a>
+                        <a href="#"><router-link to="/">Accessoires</router-link></a>
                     </li>
                 </ul>
             </ul>
@@ -29,13 +29,13 @@
                 </li>
                 <ul class="content-submenu">
                     <li>
-                        <a href="#"><router-link to="Recevoir">Recevoir</router-link></a>
+                        <a href="#"><router-link to="/">Recevoir</router-link></a>
                     </li>
                     <li>
-                        <a href="#"><router-link to="Food">Food</router-link></a>
+                        <a href="#"><router-link to="/">Food</router-link></a>
                     </li>
                     <li>
-                        <a href="#"><router-link to="Cocktails">Cocktails</router-link></a>
+                        <a href="#"><router-link to="/">Cocktails</router-link></a>
                     </li>
                 </ul>
             </ul>
@@ -69,6 +69,7 @@ export default {
     }
     main {
         ul {
+            margin-top: 20px;
             padding: 0;
             min-width: 86vw;
 

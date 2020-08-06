@@ -128,7 +128,6 @@ export default {
                 justify-content: center;
 
                 article {
-                    width: 30vw;
                     margin: 10px;
                     .illustration {
                         img {
