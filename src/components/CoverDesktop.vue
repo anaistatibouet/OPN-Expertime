@@ -12,9 +12,9 @@
                 <p>
                     Le premier bar connecté qui vous permet de créer des centaines de cocktails à la maison en s’amusant.
                 </p>
-                <div>
-                    <a href="#" class="discover-opn">
-                        <span><img src="@/assets/icons/play.svg" alt="play"/></span>
+                <div class="discover-opn">
+                    <img src="@/assets/icons/play.svg" alt="play" />
+                    <a href="#">
                         Découvrir OPN en détails - 1’40
                     </a>
                 </div>
@@ -52,7 +52,7 @@ export default {
 
     .cover-text {
         position: absolute;
-        bottom: 35vh;
+        bottom: 32vh;
         z-index: 20;
         display: flex;
         flex-flow: row nowrap;
@@ -70,11 +70,45 @@ export default {
 
         article {
             width: 30vw;
+
             h3 {
                 margin-top: 0;
             }
+
+            p {
+                margin-bottom: 20px;
+            }
+
             .discover-opn {
-                color: white;
+                margin-bottom: 50px;
+
+                -webkit-transition: all 0.2s ease-in;
+                -moz-transition: all 0.2s ease-in;
+                -o-transition: all 0.2s ease-in;
+                transition: all 0.2s ease-in;
+
+                a {
+                    -webkit-transition: all 0.2s ease-in;
+                    -moz-transition: all 0.2s ease-in;
+                    -o-transition: all 0.2s ease-in;
+                    transition: all 0.2s ease-in;
+
+                    color: white;
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    margin-left: 12px;
+                }
+            }
+
+            .discover-opn:hover {
+                a {
+                    color: var(--black);
+                    text-decoration: none;
+                }
+
+                img {
+                    filter: invert(1);
+                }
             }
 
             .discover-starter:hover {
